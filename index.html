@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Madison parking</title>
+	<script src="js/lib/angular.min.js"></script>
+	<script src="js/lib/bootstrap.min.js"></script>
+	<script src="js/controller.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body ng-app="madParking">
+
+	<div class="parkingdata table-responsive" ng-controller = "parkingData">
+		<table class="table">
+			<tr>
+				<th>Ramp</th>
+				<th>Available</th>
+			</tr>
+			<tr ng-repeat="item in parking.lots">
+				<td>{{ item.name }}</td>
+				<td>{{ item.openSpots }}</td>
+
+			</tr>
+
+		</table>
+
+	</div>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</body>
+</html>
